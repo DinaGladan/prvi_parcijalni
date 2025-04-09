@@ -67,9 +67,8 @@ def create_new_offer(offers, products, customers):
         }
         proizvodi_za_kupit.append(proizvod)
         
-        sub_total = 0
-        for proizvod in proizvodi_za_kupit:
-            sub_total += proizvod["item_total"]
+        sub_total = sum(proizvod["item_total"] for proizvod in proizvodi_za_kupit)
+
         tax = sub_total * 0.1
         total = sub_total + tax
         broj_ponude = max(ponuda["offer_number"] for ponuda in offers) + 1
