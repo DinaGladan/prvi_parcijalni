@@ -188,7 +188,7 @@ def display_offers(offers):
         found = False
         for ponuda in offers:
             parts = ponuda["date"].split("-")
-            if len(parts) == 3 and parts[1] == mjesec:
+            if len(parts) == 3 and parts[1] == str(mjesec).zfill(2):
                 print_offer(ponuda)
                 found = True
         if not found:
