@@ -205,7 +205,7 @@ def display_offers(offers):
 # Pomoćna funkcija za prikaz jedne ponude
 def print_offer(offer):
     """Display details of a single offer."""
-    print(f"Ponuda br: {offer['offer_number']}, Kupac: {offer['customer']['name']}, Datum ponude: {offer['date']}")
+    print(f"Ponuda br: {offer['offer_number']}, Kupac: {offer['customer']}, Datum ponude: {offer['date']}")
     print("Stavke:")
     for item in offer["items"]:
         print(f"  - {item['product_name']} (ID: {item['product_id']}): {item['description']}")
