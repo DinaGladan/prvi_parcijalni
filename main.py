@@ -36,17 +36,17 @@ def create_new_offer(offers, products, customers):
     print("Dostupni kupci su:")
 
     for i in range(len(customers)):
-        print(i+1, customers[i]["name"])
+        print(i+1, customers[i]['name'])
 
     broj_kupca = int(input("Unesite broj koji se nalazi ispred zeljenog kupca:")) -1
-    kupac = customers[broj_kupca]["name"]
+    kupac = customers[broj_kupca]
 
     date = input("Unesite datum (GODINA-DAN-MJESEC): ")
     
     print("Dostupni proizvodi:")
 
     for i in range(len(products)):
-        print(f"{i + 1}. {products[i]["name"]} ima cijenu: {products[i]["price"]}")
+        print(f"{i + 1}. {products[i]['name']} ima cijenu: {products[i]['price']}")
     
     proizvodi_za_kupit = []
 
@@ -119,7 +119,7 @@ def manage_products(products):
         print("Dostupni proizvodi:")
 
         for i in range(len(products)):
-            print(f"{i + 1}. {products[i]["name"]} ima cijenu: {products[i]["price"]}")
+            print(f"{i + 1}. {products[i]['name']} ima cijenu: {products[i]['price']}")
         
         id_proizvoda_za_izmjenu =int(input("Unesite broj ispred proizvoda kojeg zelite izmijenit: "))
 
@@ -149,7 +149,7 @@ def manage_customers(customers):
     opcija = int(input("Ako zelite pregledati sve kupce upisite 1,\n ako zelite dodati novog kupca upisite 2"))
     if opcija == 1:
         for kupac in customers:
-            print(f"Ime kupca: {kupac["name"]} email: {kupac["email"]} vat_id: {kupac["vat_id"]}")
+            print(f"Ime kupca: {kupac['name']} email: {kupac['email']} vat_id: {kupac['vat_id']}")
 
     elif opcija == 2:
 
